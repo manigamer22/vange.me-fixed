@@ -326,7 +326,7 @@ public:
     
     bool GetDormant()
     {
-        return *(bool*)((uintptr_t)this + 0x121);
+        return *(bool*)((uintptr_t)this + 0x125);
     }
     
     unsigned char GetLifeState()
@@ -556,7 +556,7 @@ class C_BaseAttributableItem : public C_BaseEntity
 public:
     int* GetItemDefinitionIndex()
     {
-        return (int*)((uintptr_t)this + offsets.DT_BaseAttributableItem.m_iItemDefinitionIndex);
+        return (short*)((uintptr_t)this + offsets.DT_BaseAttributableItem.m_iItemDefinitionIndex);
     }
     
     int* GetItemIDHigh()
@@ -783,25 +783,25 @@ public:
     CCSWeaponInfo* GetCSWpnData()
     {
         typedef CCSWeaponInfo* (* oGetCSWpnData)(void*);
-        return getvfunc<oGetCSWpnData>(this, 513)(this);
+        return getvfunc<oGetCSWpnData>(this, 516)(this);
     }
     
     float GetInaccuracy()
     {
         typedef float (* oGetInaccuracy)(void*);
-        return getvfunc<oGetInaccuracy>(this, 536)(this);
+        return getvfunc<oGetInaccuracy>(this, 539)(this);
     }
     
     float GetSpread()
     {
         typedef float (* oGetSpread)(void*);
-        return getvfunc<oGetSpread>(this, 505)(this);
+        return getvfunc<oGetSpread>(this, 508)(this);
     }
     
     void UpdateAccuracyPenalty()
     {
         typedef void (* oUpdateAccuracyPenalty)(void*);
-        return getvfunc<oUpdateAccuracyPenalty>(this, 537)(this);
+        return getvfunc<oUpdateAccuracyPenalty>(this, 540)(this);
     }
     
     

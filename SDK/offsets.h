@@ -119,7 +119,7 @@ struct COffsets
 
 	struct
 	{
-		int m_iItemDefinitionIndex;
+		short m_iItemDefinitionIndex;
 		int m_iItemIDHigh;
 		int m_iAccountID;
 		int m_iEntityQuality;

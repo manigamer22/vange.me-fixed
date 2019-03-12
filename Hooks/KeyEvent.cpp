@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "main.h"
 
 int hkKeyEvent(void* thisptr, int eventcode, int keynum, const char* currentbinding)
 {
@@ -8,11 +8,7 @@ int hkKeyEvent(void* thisptr, int eventcode, int keynum, const char* currentbind
         {
             vars.menu = !vars.menu;
             
-            if(vars.menu)
-                pEngine->ExecuteClientCmd("cl_mouseenable 0");
-            else
-                pEngine->ExecuteClientCmd("cl_mouseenable 1");
-
+            
         }
         
     }
@@ -27,9 +23,8 @@ int hkKeyEvent(void* thisptr, int eventcode, int keynum, const char* currentbind
         
     }
     
-    return clientVMT->GetOriginalMethod<tKeyEvent>(20)(thisptr, eventcode, keynum, currentbinding);
+    return clientVMT->GetOriginalMethod<tKeyEvent>(21)(thisptr, eventcode, keynum, currentbinding);
 }
-
 
 
 
